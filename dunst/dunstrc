@@ -1,0 +1,68 @@
+# ===============
+#  DUNST DOTFILE
+# MADE BY CHECHU!
+# ===============
+
+[global]
+    follow 					= mouse
+
+    geometry 				= "300x3-16+44"
+    indicate_hidden 		= yes
+
+    separator_height 		= 3
+    padding					= 8
+    horizontal_padding 		= 8
+
+    frame_width 			= 3
+    frame_color 			= "#222D32"
+    separator_color 		= frame
+
+    sort 					= yes
+
+    idle_threshold 			= 120
+
+    font 					= Roboto Mono Medium 11
+    line_height 			= 0
+
+    markup 					= full
+    #   %a  appname
+    #   %s  summary
+    #   %b  body
+    format 					= "<b>%s</b>\n%b"
+
+    alignment 				= left
+    word_wrap 				= yes
+    ignore_newline 			= no
+
+    stack_duplicates 		= true
+    hide_duplicate_count 	= false
+    show_indicators 		= no
+
+    icon_position 			= off
+
+    dmenu 					= /usr/bin/dmenu -p dunst:
+    browser 				= /usr/bin/firefox -new-tab
+
+    always_run_script 		= true
+
+    title 					= Dunst
+    class 					= Dunst
+
+[experimental]
+    per_monitor_dpi 		= false
+
+[urgency_low]
+    background 				= "#222D32"
+    foreground 				= "#FFFFFF"
+    timeout 				= 2
+
+[urgency_normal]
+    background 				= "#222D32"
+    foreground 				= "#FFFFFF"
+    timeout 				= 5
+
+[urgency_critical]
+    background 				= "#222D32"
+    foreground 				= "#FFFFFF"
+    frame_color 			= "#BD2C40"
+    timeout 				= 10

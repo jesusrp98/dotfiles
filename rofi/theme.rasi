@@ -1,0 +1,83 @@
+/** ===============
+*      ROFI THEME
+*   MADE BY CHECHU!
+*   =============== **/
+
+/** COLORS & FONT **/
+* {
+    background:             rgba (34, 45, 50, 100%);
+    background-alternate:   rgba (41, 55, 61, 100%);
+    selected-background:    rgba (0, 131, 143, 100%);
+    foreground:             White;
+
+    border-color:           @selected-background;
+    background-color:		rgba (0, 0, 0, 0 %);
+
+    font:					"Roboto Mono Medium 11";
+}
+
+/** ELEMENTS PROPERTIES **/
+#window {
+    background-color: 		@background;
+    border:           		3;
+    padding:          		5;
+}
+
+#textbox {
+    text-color: 			@foreground;
+}
+
+#listview {
+    padding: 				5px 0px 0px;
+}
+
+#element {
+    padding: 				7px ;
+}
+
+#element.normal.normal {
+    background-color: 		@background;
+    text-color:       		@foreground;
+}
+
+#element.selected.normal {
+    background-color: 		@selected-background;
+    text-color:       		@foreground;
+}
+
+#element.alternate.normal {
+    background-color: 		@background-alternate;
+    text-color:       		@foreground;
+}
+
+#element.selected.active {
+    background-color: 		@selected-background;
+    text-color:       		@foreground;
+}
+
+#element.normal.active {
+    background-color: 		@background;
+    text-color:       		@foreground;
+}
+
+#element.alternate.active {
+    background-color: 		@background-alternate;
+    text-color:       		@foreground;
+}
+
+/** TEXT IMPUT **/
+#entry {
+    spacing:    			0;
+    text-color: 			@foreground;
+}
+
+#prompt {
+    spacing:    			0;
+    text-color: 			@foreground;
+}
+
+#inputbar {
+    spacing:    			0;
+    text-color: 			@foreground;
+    padding:    			5px ;
+}

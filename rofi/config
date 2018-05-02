@@ -1,0 +1,27 @@
+! ===============
+!   ROFI DOTFILE
+! MADE BY CHECHU!
+! ===============
+
+! ROFI THEME
+	rofi.theme: ~/.config/rofi/theme.rasi
+	rofi.show-icons: true
+	rofi.show-match: true
+
+	rofi.lines: 16
+	rofi.scroll-method: 1
+	rofi.cycle: false 
+	rofi.width: 50
+
+	rofi.location: 0
+	rofi.case-sensitive: false
+
+! MODE LABEL
+	rofi.display-run:
+	rofi.display-window:
+	rofi.display-drun:
+	rofi.display-combi:Search:   
+
+! KEY BINDINGS
+	rofi.kb-accept-alt: Alt+Return
+	rofi.kb-cancel: Escape,Super_L

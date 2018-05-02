@@ -1,0 +1,145 @@
+; ===============
+; POLYBAR DOTFILE
+; MADE BY CHECHU!
+; ===============
+
+; COLOR PALLETTE
+[colors]
+    background 						= #222D32
+    desktop         				= #151B1E
+    foreground 						= #FFFFFF
+    foreground-alt 					= #9E9E9E
+    accent          				= #00838F
+    alert 							= #BD2C40
+
+; MAIN PROPERTIES
+[bar/main]
+    monitor 						= eDP-1
+
+    width               			= 100%
+    height              			= 28
+    padding-right       			= 2
+
+    background          			= ${colors.background}
+    foreground          			= ${colors.foreground}
+
+    font-0              			= Roboto Mono: pixelsize=11: weight=medium; 2
+
+    modules-left        			= i3 xwindow
+    modules-center      			= time 
+    modules-right       			= volume temperature memory battery brightness wireless
+
+    fixed-center        			= true
+    module-margin-left  			= 3
+
+    scroll-up           			= i3wm-wsnext
+    scroll-down         			= i3wm-wsprev
+
+	tray-position 					= right
+	tray-padding 					= 3
+
+; i3 WORKSPACES
+[module/i3]
+    type 							= internal/i3
+
+    format 							= <label-mode><label-state>
+    wrapping-scroll 				= false
+    index-sort 						= true
+
+    label-mode-background 			= ${colors.accent}
+    label-mode-padding 				= 1
+
+    label-focused-foreground 		= ${colors.foreground}
+    label-focused-padding 			= 1
+
+    label-visible-foreground 		= ${colors.foreground-alt}
+    label-visible-padding 			= 1
+
+    label-unfocused-foreground 		= ${colors.foreground-alt}
+    label-unfocused-padding 		= 1
+
+    label-urgent-foreground 		= ${colors.alert}
+    label-urgent-padding 			= 1
+
+; ACTIVE WINDOW INFO
+[module/xwindow]
+    type 							= internal/xwindow
+
+    label 							= %title%
+    label-maxlen 					= 70
+
+; DATE & TIME
+[module/time]
+    type 							= internal/date
+
+    label 							= %date%, %time%
+    label-foreground 				= ${colors.foreground}
+    date 							= "%A %b %d"
+    time 							= %H:%M
+
+; VOLUME CONTROLL
+[module/volume]
+    type 							= internal/volume
+
+    format-volume 					= <ramp-volume> <label-volume>
+    label-volume 					= %percentage%%
+    label-volume-foreground 		= ${colors.foreground-alt}
+
+    format-mute 					= <label-muted>
+    label-muted 					= MUTED
+    label-muted-foreground 			= ${colors.foreground-alt}
+    ramp-volume-0 					= VOLUME
+
+; CPU TEMP 
+[module/temperature]
+    type 							= internal/temperature
+    interval                        = 5
+    format-prefix 					= "TEMP "
+
+    label 							= %temperature%
+    label-foreground 				= ${colors.foreground-alt}
+    label-warn-foreground 			= ${colors.alert} 
+
+; RAM USSAGE
+[module/memory]
+    type 							= internal/memory
+    interval                        = 5 
+    format-prefix 					= "RAM "
+
+    label 							= %gb_used%
+    label-foreground 				= ${colors.foreground-alt}
+
+; BATTERY
+[module/battery]
+	type 							= internal/battery
+	battery 						= BAT0
+    interval                        = 5
+	adapter 						= AC
+	full-at 						= 99
+
+	format-charging 				= BAT <label-charging>
+	format-discharging 				= BAT <label-discharging>
+
+	label-charging-foreground 		= ${colors.foreground}
+	label-discharging-foreground 	= ${colors.foreground-alt}
+
+; BRIGHTNESS
+[module/brightness]
+    type                            = custom/script
+    exec                            = ~/.config/polybar/bright.sh
+    interval                        = 5
+
+    scroll-up                       = ~/.config/dunst/bright.sh up
+    scroll-down                     = ~/.config/dunst/bright.sh down
+
+; WIRELESS INFO
+[module/wireless]
+	type 							= internal/network
+	interface 						= wlp58s0
+    interval                        = 5
+
+	label-connected 				= %essid%
+	label-connected-foreground 		= ${colors.foreground}
+
+	label-disconnected 				= NO WIFI
+	label-disconnected-foreground 	= ${colors.foreground-alt}
