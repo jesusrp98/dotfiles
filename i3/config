@@ -4,19 +4,21 @@
 # ===============
 
 # MOD KEY & FONT
-    set $mod Mod1
-    font pango:Roboto Mono Medium 11 
+    set $mod                        Mod1
+    font pango:                     Roboto Mono Medium 11 
 
 # BASIC BINDINGS
 	bindsym $mod+q 					exec --no-startup-id gnome-terminal 
 	bindsym $mod+Escape 			kill
 	bindsym Super_L 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi"
+	bindsym Super_R 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi"
 
 # APPS INIT
 	exec --no-startup-id firefox
 	exec --no-startup-id redshift
 	exec --no-startup-id compton
 	exec --no-startup-id hsetroot -solid "#151B1E"
+    exec --no-startup-id ~/dotfiles/init_stuff.sh
 	exec --no-startup-id ~/dotfiles/dunst/launch.sh
 	exec_always --no-startup-id ~/dotfiles/polybar/launch.sh
 	exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)
@@ -97,6 +99,7 @@
 		bindsym p 					exec poweroff
 		bindsym r 					exec reboot
 		bindsym s 					exec pkill -u jesus
+        bindsym l                   exec --no-startup-id i3lock -c 000000, mode "default"
 		bindsym space 				restart
 
 	   	bindsym Escape 				mode "default"
@@ -109,6 +112,7 @@
 	hide_edge_borders 				smart
 	gaps 							inner 16
 	for_window [class=".*"] 		border pixel 3
+    for_window [class="Spotify"]    floating enable, resize set $floating-size, move position center, move scratchpad
 
 # AUDIO CONTROLS
 	bindsym XF86AudioRaiseVolume 	exec --no-startup-id ~/dotfiles/dunst/volume.sh up

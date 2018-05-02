@@ -1,0 +1,51 @@
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1021,
+       "width": 642,
+       "x": 16,
+       "y": 224
+    },
+    "name": "Corebird - @jesusrp98",
+    "percent": 0.35,
+    "swallows": [
+       {
+        "class": "^Corebird$",
+        "instance": "^corebird$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "percent": 0.65,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1042,
+               "width": 1218,
+               "x": 683,
+               "y": 203
+            },
+            "name": "Telegram",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^TelegramDesktop$",
+                "instance": "^telegram\\-desktop$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
