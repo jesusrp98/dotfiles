@@ -4,58 +4,58 @@
 " ===============
 
 " GENERAL SETTINGS
-    syntax enable
-    set relativenumber
-    set number
+syntax enable
+set relativenumber
+set number
 
-    set numberwidth=4
-    set tabstop=4
+set numberwidth=4
+set tabstop=4
 
-    set smartindent
-    set expandtab
-    set shiftwidth=4
-    set smarttab
-    set expandtab
-    set autoindent
-    set lazyredraw 
-    set showmatch 
-    
-    " SEARCH IMPROVEMENTS
-    set ignorecase
-    set smartcase
-    set hlsearch
-    set incsearch
-    
-    set scrolloff=2
+set smartindent
+set expandtab
+set shiftwidth=4
+set smarttab
+set expandtab
+set autoindent
+set lazyredraw 
+set showmatch 
+
+" SEARCH IMPROVEMENTS
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+set scrolloff=2
 
 " KEY BINDINGS
-    " FUNCTIONS
-    map <c-c> :call ToggleRelativeNumber()<cr>
+" FUNCTIONS
+map <c-c> :call ToggleRelativeNumber()<cr>
 
-    " NO ARROW KEYS :)
-    map <Down> <NOP>
-    map <Up> <NOP>
-    map <Left> <NOP>
-    map <Right> <NOP>
+" NO ARROW KEYS :)
+map <Down> <NOP>
+map <Up> <NOP>
+map <Left> <NOP>
+map <Right> <NOP>
 
-    " AUTOCOMPLETE {}, () & []
-    inoremap {<cr> {<cr>}<c-o><s-o>
-    inoremap [<cr> [<cr>]<c-o><s-o>
-    inoremap (<cr> (<cr>)<c-o><s-o>
+" AUTOCOMPLETE {}, () & []
+inoremap {<cr> {<cr>}<c-o><s-o>
+inoremap [<cr> [<cr>]<c-o><s-o>
+inoremap (<cr> (<cr>)<c-o><s-o>
 
 " USEFULL BINDINGS
-    nnoremap j gj
-    nnoremap k gk
-    nnoremap B ^
-    nnoremap E $
-    inoremap jj <Esc>
-    
-    " REPLACE : WITH ,
-    nnoremap , :
-    vnoremap , :
+nnoremap j gj
+nnoremap k gk
+nnoremap B ^
+nnoremap E $
+inoremap jj <Esc>
+
+" REPLACE : WITH ,
+nnoremap , :
+vnoremap , :
 
 " VARIOUS FUNCTIONS
-    function ToggleRelativeNumber()
-        set relativenumber!
-        echo "Toggle relative numbers"
-    endfunc
+function ToggleRelativeNumber()
+    set relativenumber!
+    echo "Toggle relative numbers"
+endfunc

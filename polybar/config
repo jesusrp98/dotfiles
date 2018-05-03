@@ -12,8 +12,32 @@
     accent          				= #00838F
     alert 							= #BD2C40
 
-; MAIN PROPERTIES
-[bar/main]
+; LINUX-PC BAR PROPERTIES
+[bar/pc]
+    monitor                         = DP-3
+    monitor-fallback                = HDMI-1
+
+    width                           = 100%
+    height                          = 28
+    padding-right                   = 2
+
+    background                      = ${colors.background}
+    foreground                      = ${colors.foreground}
+
+    font-0                          = Roboto Mono: pixelsize=11: weight=medium; 3
+
+    modules-left                    = i3 xwindow
+    modules-center                  = time
+    modules-right                   = song volume temperature_ryzen memory lan
+
+    fixed-center                    = true
+    module-margin-left              = 3
+
+    scroll-up                       = i3wm-wsnext
+    scroll-down                     = i3wm-wsprev
+
+; LINUX-XPS BAR PROPERTIES
+[bar/xps]
     monitor 						= eDP-1
 
     width               			= 100%
@@ -27,7 +51,7 @@
 
     modules-left        			= i3 xwindow
     modules-center      			= time 
-    modules-right       			= volume temperature memory battery brightness wireless
+    modules-right       			= volume temperature_intel memory battery brightness wireless
 
     fixed-center        			= true
     module-margin-left  			= 3
@@ -77,6 +101,16 @@
     date 							= "%A %b %d"
     time 							= %H:%M
 
+; MUSIC INFO
+[module/song]
+    type                            = custom/script
+    exec                            = ~/dotfiles/polybar/song.sh
+    interval                        = 2
+
+    click-left                      = playerctl play-pause
+    scroll-up                       = playerctl next
+    scroll-down                     = playerctl previous
+
 ; VOLUME CONTROLL
 [module/volume]
     type 							= internal/volume
@@ -90,8 +124,8 @@
     label-muted-foreground 			= ${colors.foreground-alt}
     ramp-volume-0 					= VOLUME
 
-; CPU TEMP 
-[module/temperature]
+; CPU TEMP FOR LINUX-XPS
+[module/temperature_intel]
     type 							= internal/temperature
     interval                        = 5
     format-prefix 					= "TEMP "
@@ -99,6 +133,18 @@
     label 							= %temperature%
     label-foreground 				= ${colors.foreground-alt}
     label-warn-foreground 			= ${colors.alert} 
+
+; CPU TEMP FOR LINUX-PC (RYZEN ONLY)
+; HWMON REQUIRED FOR RYZEN CPU
+[module/temperature_ryzen]
+    type                            = internal/temperature
+    hwmon-path                      = /sys/class/hwmon/hwmon0/temp1_input
+    interval                        = 5
+    format-prefix                   = "TEMP "
+
+    label                           = %temperature%
+    label-foreground                = ${colors.foreground-alt}
+    label-warn-foreground           = ${colors.alert}
 
 ; RAM USSAGE
 [module/memory]
@@ -126,13 +172,13 @@
 ; BRIGHTNESS
 [module/brightness]
     type                            = custom/script
-    exec                            = ~/.config/polybar/bright.sh
+    exec                            = ~/dotfiles/polybar/bright.sh
     interval                        = 5
 
-    scroll-up                       = ~/.config/dunst/bright.sh up
-    scroll-down                     = ~/.config/dunst/bright.sh down
+    scroll-up                       = ~/dotfiles/dunst/bright.sh up
+    scroll-down                     = ~/dotfiles/dunst/bright.sh down
 
-; WIRELESS INFO
+; WIRELESS CONNECTION
 [module/wireless]
 	type 							= internal/network
 	interface 						= wlp58s0
@@ -143,3 +189,18 @@
 
 	label-disconnected 				= NO WIFI
 	label-disconnected-foreground 	= ${colors.foreground-alt}
+
+; LAN CONNECTION
+[module/lan]
+    type                            = internal/network
+    interface                       = enp33s0
+    interval                        = 5
+
+    format-connected                = <ramp-signal> <label-connected>
+    label-connected                 = %downspeed%
+    label-connected-foreground      = ${colors.foreground-alt}
+    ramp-signal-0                   = NET
+
+    label-disconnected              = DISCONNECTED
+    label-disconnected-foreground   = ${colors.foreground-alt}
+

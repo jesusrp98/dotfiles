@@ -4,126 +4,121 @@
 # ===============
 
 # MOD KEY & FONT
-    set $mod                        Mod1
-    font pango:                     Roboto Mono Medium 11 
+set $mod                        Mod1
+font pango:                     Roboto Mono Medium 11
 
 # BASIC BINDINGS
-	bindsym $mod+q 					exec --no-startup-id gnome-terminal 
-	bindsym $mod+Escape 			kill
-	bindsym Super_L 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi"
-	bindsym Super_R 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi"
+bindsym $mod+q 					exec --no-startup-id gnome-terminal
+bindsym $mod+Escape 			kill
+bindsym Super_L 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -config ~/dotfiles/rofi/config"
+bindsym Super_R 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -config ~/dotfiles/rofi/config"
 
 # APPS INIT
-	exec --no-startup-id firefox
-	exec --no-startup-id redshift
-	exec --no-startup-id compton
-	exec --no-startup-id hsetroot -solid "#151B1E"
-    exec --no-startup-id ~/dotfiles/init_stuff.sh
-	exec --no-startup-id ~/dotfiles/dunst/launch.sh
-	exec_always --no-startup-id ~/dotfiles/polybar/launch.sh
-	exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)
+exec_always --no-startup-id ~/dotfiles/polybar/launch.sh
+exec --no-startup-id ~/dotfiles/i3/init_stuff.sh
 
 # CHANGE FOCUS
-	bindsym $mod+w 					focus up
-	bindsym $mod+a 					focus left
-	bindsym $mod+s 					focus down
-	bindsym $mod+d 					focus right
+bindsym $mod+w 					focus up
+bindsym $mod+a 					focus left
+bindsym $mod+s 					focus down
+bindsym $mod+d 					focus right
 
 # MOVE FOCUSED WINDOW
-	bindsym $mod+Shift+w 			move up
-	bindsym $mod+Shift+a 			move left
-	bindsym $mod+Shift+s 			move down
-	bindsym $mod+Shift+d 			move right
+bindsym $mod+Shift+w 			move up
+bindsym $mod+Shift+a 			move left
+bindsym $mod+Shift+s 			move down
+bindsym $mod+Shift+d 			move right
 
 # LAYOUT MODE
-	bindsym $mod+v 					floating toggle, resize set $floating-size, move position center
-	bindsym $mod+t 					layout toggle tabbed split
-	bindsym $mod+f 					fullscreen toggle
-	bindsym $mod+c 					split toggle 
+bindsym $mod+v 					floating toggle, resize set $floating-size, move position center
+bindsym $mod+t 					layout toggle tabbed split
+bindsym $mod+f 					fullscreen toggle
+bindsym $mod+c 					split toggle
 
 # WORKSPACES VARIABLES
-	set $workspace1 				1
-	set $workspace2 				2
-	set $workspace3 				3
-	set $workspace4 				4
-	set $workspace5 				5
+set $workspace1 				1
+set $workspace2 				2
+set $workspace3 				3
+set $workspace4 				4
+set $workspace5 				5
 
 # SWITCH WORKSPACES
-	bindsym $mod+1 					workspace $workspace1
-	bindsym $mod+2 					workspace $workspace2
-	bindsym $mod+3 					workspace $workspace3
-	bindsym $mod+4 					workspace $workspace4
-	bindsym $mod+5 					workspace $workspace5
-	bindsym $mod+Tab 				workspace next
+bindsym $mod+1 					workspace $workspace1
+bindsym $mod+2 					workspace $workspace2
+bindsym $mod+3 					workspace $workspace3
+bindsym $mod+4 					workspace $workspace4
+bindsym $mod+5 					workspace $workspace5
+bindsym $mod+Tab 				workspace next
 
 # MOVE FOCUSED WINDOW TO WORKSPACE
-	bindsym $mod+Shift+1			move container to workspace $workspace1
-	bindsym $mod+Shift+2 			move container to workspace $workspace2
-	bindsym $mod+Shift+3 			move container to workspace $workspace3
-	bindsym $mod+Shift+4 			move container to workspace $workspace4
-	bindsym $mod+Shift+5 			move container to workspace $workspace5
+bindsym $mod+Shift+1			move container to workspace $workspace1
+bindsym $mod+Shift+2 			move container to workspace $workspace2
+bindsym $mod+Shift+3 			move container to workspace $workspace3
+bindsym $mod+Shift+4 			move container to workspace $workspace4
+bindsym $mod+Shift+5 			move container to workspace $workspace5
 
 #SCRATCHPAD
-	bindsym $mod+Shift+e 			move scratchpad
-	bindsym $mod+e                  scratchpad show, resize set $floating-size, move position center
+bindsym $mod+Shift+e 			move scratchpad
+bindsym $mod+e                  scratchpad show, resize set $floating-size, move position center
 
 # WINDOW COLORS
-	set $focused-color 	    		#00838F
-	set $unfocused-color    		#222D32
-	set $text-color         		#FFFFFF
-	set $urgent-color 	    		#BD2C40
-	set $indicator-color			#BD2C40
+set $focused-color 	    		#00838F
+set $unfocused-color    		#222D32
+set $text-color         		#FFFFFF
+set $urgent-color 	    		#BD2C40
+set $indicator-color			#BD2C40
 
-# WINDOW MODE                   BORDER              BACKGROUND         TEXT 		    INDICATOR
-	client.focused              $focused-color      $focused-color     $text-color	    $indicator-color
-	client.unfocused            $unfocused-color    $unfocused-color   $text-color	    $indicator-color
-	client.focused_inactive     $unfocused-color    $unfocused-color   $text-color      $indicator-color
-	client.urgent               $urgent-color       $urgent-color      $text-color      $indicator-color
+# WINDOW MODE               	BORDER              BACKGROUND         TEXT 		    INDICATOR
+client.focused              	$focused-color      $focused-color     $text-color	    $indicator-color
+client.unfocused            	$unfocused-color    $unfocused-color   $text-color	    $indicator-color
+client.focused_inactive     	$unfocused-color    $unfocused-color   $text-color      $indicator-color
+client.urgent               	$urgent-color       $urgent-color      $text-color      $indicator-color
 
 # RESIZE MODE
-	bindsym $mod+r                  mode "RESIZE"
-	mode "RESIZE" {
-		bindsym a 					resize shrink width   15 px or 15 ppt
-		bindsym s 					resize grow   height  15 px or 15 ppt
-		bindsym w                   resize shrink height  15 px or 15 ppt
-		bindsym d 					resize grow   width   15 px or 15 ppt
+bindsym $mod+r                  mode "RESIZE"
+mode "RESIZE" {
+    bindsym a 					resize shrink width   15 px or 15 ppt
+    bindsym s 					resize grow   height  15 px or 15 ppt
+    bindsym w                   resize shrink height  15 px or 15 ppt
+    bindsym d 					resize grow   width   15 px or 15 ppt
 
-	   	bindsym Escape 				mode "default"
-		bindsym $mod+r 				mode "default"
-	}
+    bindsym Escape 				mode "default"
+    bindsym $mod+r 				mode "default"
+}
 
 #SYSTEM MODE
-	bindsym $mod+p                  mode "POWER"
-    bindsym $mod+Shift+p            exec poweroff
-	mode "POWER" {
-		bindsym p 					exec poweroff
-		bindsym r 					exec reboot
-		bindsym s 					exec pkill -u jesus
-        bindsym l                   exec --no-startup-id i3lock -c 000000, mode "default"
-		bindsym space 				restart
+bindsym $mod+p                  mode "POWER"
+bindsym $mod+Shift+p            exec poweroff
+bindsym $mod+Shift+l            exec --no-startup-id i3lock -c 000000
+mode "POWER" {
+    bindsym p 					exec poweroff
+    bindsym r 					exec reboot
+    bindsym s 					exec pkill -u jesus
+    bindsym l                   exec --no-startup-id i3lock -c 000000, mode "default"
+    bindsym space 				restart
 
-	   	bindsym Escape 				mode "default"
-		bindsym $mod+p 				mode "default"
-	}
+    bindsym Escape 				mode "default"
+    bindsym $mod+p 				mode "default"
+}
 
 # WINDOW PORPERTIES
-	set $floating-size 				1600 900
+set $floating-size 				1600 900
 
-	hide_edge_borders 				smart
-	gaps 							inner 16
-	for_window [class=".*"] 		border pixel 3
-    for_window [class="Spotify"]    floating enable, resize set $floating-size, move position center, move scratchpad
+hide_edge_borders 				smart
+gaps 							inner 16
+for_window [class=".*"] 		border pixel 3
+for_window [class="Spotify"]    floating enable, resize set $floating-size, move position center, move scratchpad
 
 # AUDIO CONTROLS
-	bindsym XF86AudioRaiseVolume 	exec --no-startup-id ~/dotfiles/dunst/volume.sh up
-	bindsym XF86AudioLowerVolume 	exec --no-startup-id ~/dotfiles/dunst/volume.sh down
-	bindsym XF86AudioMute        	exec --no-startup-id ~/dotfiles/dunst/volume.sh mute	
+bindsym XF86AudioRaiseVolume 	exec --no-startup-id ~/dotfiles/dunst/volume.sh up
+bindsym XF86AudioLowerVolume 	exec --no-startup-id ~/dotfiles/dunst/volume.sh down
+bindsym XF86AudioMute        	exec --no-startup-id ~/dotfiles/dunst/volume.sh mute	
 
 # BRIGHTNESS CONTROL
-	bindsym XF86MonBrightnessUp 	exec --no-startup-id ~/dotfiles/dunst/bright.sh up
-	bindsym XF86MonBrightnessDown 	exec --no-startup-id ~/dotfiles/dunst/bright.sh down
+bindsym XF86MonBrightnessUp 	exec --no-startup-id ~/dotfiles/dunst/bright.sh up
+bindsym XF86MonBrightnessDown 	exec --no-startup-id ~/dotfiles/dunst/bright.sh down
 
 # MEDIA CONTROL
-	bindsym XF86AudioPlay 			exec --no-startup-id playerctl play-pause
-	bindsym XF86AudioNext 			exec --no-startup-id playerctl next
-	bindsym XF86AudioPrev 			exec --no-startup-id playerctl previous
+bindsym XF86AudioPlay 			exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext 			exec --no-startup-id playerctl next
+bindsym XF86AudioPrev 			exec --no-startup-id playerctl previous

@@ -15,6 +15,9 @@ elif [ "$1" == "mute" ]; then
     else
        VOLUME="MUTED" 
     fi
+else
+    echo "Expecting argument: {up, down, mute}"
+    exit 2
 fi
 
 # Shows notification with volume label

@@ -1,4 +1,8 @@
 #!/bin/bash
 
 killall -q polybar
-polybar -r main &
+if [ "$(hostname)" == "LINUX-PC" ]; then
+    polybar -r pc -c ~/dotfiles/polybar/config &
+else
+    polybar -r xps -c ~/dotfiles/polybar/config &
+fi

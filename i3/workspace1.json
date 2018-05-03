@@ -1,0 +1,20 @@
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "user_off",
+    "geometry": {
+       "height": 1080,
+       "width": 1250,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Firefox",
+    "percent": 1,
+    "swallows": [
+       {
+        "class": "^Firefox$",
+        "instance": "^Navigator$"
+       }
+    ],
+    "type": "con"
+}
