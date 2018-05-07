@@ -21,7 +21,7 @@ else
 fi
 
 # Shows notification with volume label
-VAR=$(cat $HOME/.config/dunst/.volume)
+VAR=$(cat ~/dotfiles/dunst/.volume)
 if [ $VAR -gt "0" ]; then
     dunstify -p -r $VAR "MASTER VOLUME $VOLUME" > ~/dotfiles/dunst/.volume -u low
 else
