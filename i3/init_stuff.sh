@@ -15,7 +15,7 @@ fi
 
 # Common commands for both PCs
 redshift -c ~/dotfiles/redshift/redshift.conf &
-# compton --config ~/dotfiles/compton/compton.conf &
+compton --config ~/dotfiles/compton/compton.conf &
 hsetroot -solid "#151B1E" &
 ~/dotfiles/dunst/launch.sh
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)

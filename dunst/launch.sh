@@ -1,4 +1,4 @@
 #!/bin/bash
 
 killall -q notify-osd
-dunst -confing ~/dotfiles/dunst/dunstrc &
+dunst -config ~/dotfiles/dunst/dunstrc &
