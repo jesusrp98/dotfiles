@@ -4,7 +4,7 @@
 ! ===============
 
 ! ROFI THEME
-	rofi.theme: ~/.config/rofi/theme.rasi
+	rofi.theme: dotfiles/rofi/theme.rasi
 	rofi.show-icons: true
 	rofi.show-match: true
 
@@ -24,4 +24,4 @@
 
 ! KEY BINDINGS
 	rofi.kb-accept-alt: Alt+Return
-	rofi.kb-cancel: Escape,Super_L
+	rofi.kb-cancel: Escape,Super_L,Super_R
