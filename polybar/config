@@ -98,7 +98,7 @@
 
     label 							= %date%, %time%
     label-foreground 				= ${colors.foreground}
-    date 							= "%A %b %d"
+    date 							= "%A %B %d"
     time 							= %H:%M
 
 ; MUSIC INFO

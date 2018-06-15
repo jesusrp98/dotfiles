@@ -21,7 +21,7 @@ alias dunstconfig="vim ~/dotfiles/dunst/dunstrc"
 # GIT ALIAS
 alias gi="git init"
 alias gcl="git clone"
-alias gca="git commit -am"
+alias gc="git commit -m"
 alias gps="git push"
 alias gpl="git pull"
 alias gst="git status"
@@ -29,14 +29,12 @@ alias gl="git log"
 alias gaa="git add ."
 
 # FOLDERS ALIAS
-alias and="~/Downloads/android-studio/bin/studio.sh&"
-alias cd-ed="~/Documents/ed"
-alias cd-pas="~/Documents/pas/"
+alias hdd="sudo ntfs-3g /dev/sdb1 /mnt/hdd"
 
 # RANDOM ALIAS
-alias upd="sudo pacman -Syu"
+alias upd="sudo pacman -Syu --noconfirm"
 alias search="sudo pacman -S"
-alias v="vim -u ~/dotfiles/vim/vimrc"
+alias v="vim"
 alias la="ls -la"
 alias cl="clear"
 alias zshrs="source ~/dotfiles/zsh/.zshrc"

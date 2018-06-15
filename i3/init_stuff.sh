@@ -9,7 +9,6 @@ if [ "$(hostname)" == "LINUX-PC" ]; then
     firefox &
     telegram-desktop &
     corebird &
-    spotify &
     blueman-applet &
 fi
 
