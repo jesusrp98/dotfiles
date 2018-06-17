@@ -121,3 +121,6 @@ bindsym XF86MonBrightnessDown 	exec --no-startup-id ~/dotfiles/dunst/bright.sh d
 bindsym XF86AudioPlay 			exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext 			exec --no-startup-id playerctl next
 bindsym XF86AudioPrev 			exec --no-startup-id playerctl previous
+
+# INTERNET APPLET
+bindsym $mod+n                  exec --no-startup-id ~/dotfiles/i3/wifi.sh
