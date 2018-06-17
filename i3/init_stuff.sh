@@ -13,6 +13,7 @@ if [ "$(hostname)" == "LINUX-PC" ]; then
 fi
 
 # Common commands for both PCs
+firefox&
 redshift -c ~/dotfiles/redshift/redshift.conf &
 compton --config ~/dotfiles/compton/compton.conf &
 hsetroot -solid "#151B1E" &
