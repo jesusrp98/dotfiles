@@ -6,7 +6,6 @@ if [ "$(hostname)" == "LINUX-PC" ]; then
     xrandr --output HDMI-1 --mode 1920x1080 --pos 0x184 --rotate normal --output DP-3 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output DP-2 --off --output DP-1 --off
     i3-msg 'workspace 1; append_layout ~/dotfiles/i3/workspace1.json'
     i3-msg 'workspace 2; append_layout ~/dotfiles/i3/workspace2.json'
-    firefox &
     telegram-desktop &
     corebird &
     blueman-applet &
