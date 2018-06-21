@@ -113,16 +113,13 @@
 
 ; VOLUME CONTROLL
 [module/volume]
-    type 							= internal/volume
+    type                            = custom/script
+    exec                            = ~/.dotfiles/polybar/volume.sh
+    interval                        = 2
 
-    format-volume 					= <ramp-volume> <label-volume>
-    label-volume 					= %percentage%%
-    label-volume-foreground 		= ${colors.foreground-alt}
-
-    format-mute 					= <label-muted>
-    label-muted 					= MUTED
-    label-muted-foreground 			= ${colors.foreground-alt}
-    ramp-volume-0 					= VOLUME
+    click-left                      = ~/.dotfiles/dunst/volume.sh mute
+    scroll-up                       = ~/.dotfiles/dunst/volume.sh up
+    scroll-down                     = ~/.config/dunst/volume.sh down
 
 ; CPU TEMP FOR LINUX-XPS
 [module/temperature_intel]

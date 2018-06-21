@@ -1,13 +1,18 @@
 #!/bin/bash
 
-# get music status
+# Get music status
 player_status=$(playerctl status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-    # metadata="$(playerctl metadata artist) · $(playerctl metadata title)"
     metadata="$(playerctl metadata title)"
 fi
 
-# print the info to bar
+# Cut the first 32 chars
+if [ $(echo $metadata | wc -c) -gt 32 ]; then
+    metadata=$(echo $metadata | cut -c1-32)
+    metadata=$(echo $metadata...)
+fi
+
+# Print the info to bar
 if [[ $player_status = "Playing" ]]; then
     echo "%{F#FFFFFF}$metadata"
 elif [[ $player_status = "Paused" ]]; then
