@@ -4,7 +4,7 @@
 ! ===============
 
 ! ROFI THEME
-	rofi.theme: dotfiles/rofi/theme.rasi
+	rofi.theme: ~/.dotfiles/rofi/theme.rasi
 	rofi.show-icons: true
 	rofi.show-match: true
 

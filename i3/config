@@ -10,12 +10,12 @@ font pango:                     Roboto Mono Medium 11
 # BASIC BINDINGS
 bindsym $mod+q 					exec --no-startup-id gnome-terminal
 bindsym $mod+Escape 			kill
-bindsym Super_L 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -config ~/dotfiles/rofi/config"
-bindsym Super_R 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -config ~/dotfiles/rofi/config"
+bindsym Super_L 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -config ~/.dotfiles/rofi/config"
+bindsym Super_R 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -config ~/.dotfiles/rofi/config"
 
 # APPS INIT
-exec_always --no-startup-id ~/dotfiles/polybar/launch.sh
-exec --no-startup-id ~/dotfiles/i3/init_stuff.sh
+exec_always --no-startup-id ~/.dotfiles/polybar/launch.sh
+exec --no-startup-id ~/.dotfiles/i3/init_stuff.sh
 
 # CHANGE FOCUS
 bindsym $mod+w 					focus up
@@ -109,13 +109,13 @@ for_window [class=".*"] 		border pixel 3
 for_window [class="Spotify"]    floating enable, resize set $floating-size, move position center, move scratchpad
 
 # AUDIO CONTROLS
-bindsym XF86AudioRaiseVolume 	exec --no-startup-id ~/dotfiles/dunst/volume.sh up
-bindsym XF86AudioLowerVolume 	exec --no-startup-id ~/dotfiles/dunst/volume.sh down
-bindsym XF86AudioMute        	exec --no-startup-id ~/dotfiles/dunst/volume.sh mute	
+bindsym XF86AudioRaiseVolume 	exec --no-startup-id ~/.dotfiles/dunst/volume.sh up
+bindsym XF86AudioLowerVolume 	exec --no-startup-id ~/.dotfiles/dunst/volume.sh down
+bindsym XF86AudioMute        	exec --no-startup-id ~/.dotfiles/dunst/volume.sh mute	
 
 # BRIGHTNESS CONTROL
-bindsym XF86MonBrightnessUp 	exec --no-startup-id ~/dotfiles/dunst/bright.sh up
-bindsym XF86MonBrightnessDown 	exec --no-startup-id ~/dotfiles/dunst/bright.sh down
+bindsym XF86MonBrightnessUp 	exec --no-startup-id ~/.dotfiles/dunst/bright.sh up
+bindsym XF86MonBrightnessDown 	exec --no-startup-id ~/.dotfiles/dunst/bright.sh down
 
 # MEDIA CONTROL
 bindsym XF86AudioPlay 			exec --no-startup-id playerctl play-pause
@@ -123,4 +123,4 @@ bindsym XF86AudioNext 			exec --no-startup-id playerctl next
 bindsym XF86AudioPrev 			exec --no-startup-id playerctl previous
 
 # INTERNET APPLET
-bindsym $mod+n                  exec --no-startup-id ~/dotfiles/i3/wifi.sh
+bindsym $mod+n                  exec --no-startup-id ~/.dotfiles/i3/wifi.sh
