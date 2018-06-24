@@ -51,7 +51,7 @@
 
     modules-left        			= i3 xwindow
     modules-center      			= time 
-    modules-right       			= volume temperature_intel memory battery brightness wireless
+    modules-right       			= volume_xps temperature_intel memory battery brightness wireless
 
     fixed-center        			= true
     module-margin-left  			= 3
@@ -111,7 +111,7 @@
     scroll-up                       = playerctl next
     scroll-down                     = playerctl previous
 
-; VOLUME CONTROLL
+; VOLUME CONTROL
 [module/volume]
     type                            = custom/script
     exec                            = ~/.dotfiles/polybar/volume.sh
@@ -120,6 +120,19 @@
     click-left                      = ~/.dotfiles/dunst/volume.sh mute
     scroll-up                       = ~/.dotfiles/dunst/volume.sh up
     scroll-down                     = ~/.config/dunst/volume.sh down
+
+; VOLUME CONTROL FOR XPS
+[module/volume_xps]
+    type 							= internal/volume
+
+    format-volume 					= <ramp-volume> <label-volume>
+    label-volume 					= %percentage%%
+    label-volume-foreground 		= ${colors.foreground-alt}
+
+    format-mute 					= <label-muted>
+    label-muted 					= MUTED
+    label-muted-foreground 			= ${colors.foreground-alt}
+    ramp-volume-0                   = VOLUME
 
 ; CPU TEMP FOR LINUX-XPS
 [module/temperature_intel]

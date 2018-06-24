@@ -17,6 +17,7 @@ alias vimconfig="vim ~/.dotfiles/vim/vimrc"
 alias rangerconfig="vim ~/.dotfiles/ranger/rc.conf"
 alias comptonconfig="vim ~/.dotfiles/compton.conf"
 alias dunstconfig="vim ~/.dotfiles/dunst/dunstrc"
+alias termiteconfig="vim ~/.dotfiles/termite/config"
 
 # GIT ALIAS
 alias gi="git init"
