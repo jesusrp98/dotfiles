@@ -34,6 +34,7 @@ alias hdd="sudo ntfs-3g /dev/sdb1 /mnt/hdd"
 # RANDOM ALIAS
 alias upd="sudo pacman -Syu --noconfirm"
 alias search="sudo pacman -S"
+alias remove="sudo pacman -R"
 alias v="vim"
 alias la="ls -la"
 alias cl="clear"
