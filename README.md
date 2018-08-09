@@ -1,13 +1,10 @@
 # Dotfiles from Chechu
-
 This repository contains the configuration files used in the PC & XPS devices from Chechu.
 
 ### What is a 'dotfile'?
-
 The term 'dotfile' refers to hidden config files from most apps on GNU/Linux systems, like Bash (.bashrc) or Vim (.vimrc). Notice the '.' at the start of the name file, thus 'dotfile' :). They are hidden by default in most file explorers by default, like Nautilus.
 
 ## System configuration
-
 List of core packages listed below.
 
 * **OS:** Arch Linux (Antergos).
@@ -19,7 +16,6 @@ List of core packages listed below.
 * **Font:** [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono).
 
 ## Available dotfiles
-
 Now, a list with all available dotfiles in this repo is presented to you.
 
 * [Compton](https://github.com/chjj/compton) - A compositor for X11.
