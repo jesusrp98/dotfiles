@@ -42,3 +42,7 @@ alias rq="ranger -r ~/.dotfiles/ranger"
 alias la="ls -la"
 alias cl="clear"
 alias zshrs="source ~/.dotfiles/zsh/.zshrc"
+
+# CUSTON ENV VARIABLES
+export PATH=`pwd`/.flutter-sdk/bin:$PATH
+export ANDROID_HOME=/home/jesus/Android/Sdk
