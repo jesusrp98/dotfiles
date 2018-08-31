@@ -46,3 +46,4 @@ alias zshrs="source ~/.dotfiles/zsh/.zshrc"
 # CUSTON ENV VARIABLES
 export PATH=`pwd`/.flutter-sdk/bin:$PATH
 export ANDROID_HOME=/home/jesus/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
