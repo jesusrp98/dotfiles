@@ -40,10 +40,11 @@ alias remove="sudo pacman -R"
 alias v="vim"
 alias rq="ranger -r ~/.dotfiles/ranger"
 alias la="ls -la"
-alias cl="clear"
 alias zshrs="source ~/.dotfiles/zsh/.zshrc"
+alias fr="flutter run"
+alias frr="flutter run --release"
+alias fb="flutter build apk"
+alias fbr="flutter build apk --release"
 
 # CUSTON ENV VARIABLES
-export PATH=`pwd`/.flutter-sdk/bin:$PATH
-export ANDROID_HOME=/home/jesus/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$HOME/.flutter-sdk/bin:$PATH
