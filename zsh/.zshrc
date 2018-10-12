@@ -46,6 +46,8 @@ alias fr="flutter run"
 alias frr="flutter run --release"
 alias fb="flutter build apk"
 alias fbr="flutter build apk --release"
+alias fupd="flutter upgrade"
+alias fd="flutter doctor -v"
 
 # CUSTON ENV VARIABLES
 export PATH=$HOME/.flutter-sdk/bin:$PATH
