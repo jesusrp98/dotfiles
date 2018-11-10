@@ -1,35 +1,20 @@
 {
-    "border": "pixel",
-    "current_border_width": 3,
-    "floating": "auto_off",
-    "geometry": {
-       "height": 1021,
-       "width": 642,
-       "x": 16,
-       "y": 224
-    },
-    "name": "Corebird - @jesusrp98",
-    "percent": 0.35,
-    "swallows": [
-       {
-        "class": "^Corebird$",
-        "instance": "^corebird$"
-       }
-    ],
-    "type": "con"
-}
-
-{
     "border": "normal",
     "floating": "auto_off",
-    "layout": "tabbed",
-    "percent": 0.65,
-    "type": "con",
+    "layout": "splith",
+    "percent": null,
+    "rect": {
+       "height": 900,
+       "width": 1600,
+       "x": 160,
+       "y": 274
+    },
+    "type": "floating_con",
     "nodes": [
         {
             "border": "pixel",
             "current_border_width": 3,
-            "floating": "auto_off",
+            "floating": "user_on",
             "geometry": {
                "height": 1042,
                "width": 1218,

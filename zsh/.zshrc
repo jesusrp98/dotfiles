@@ -29,6 +29,7 @@ alias gpl="git pull"
 alias gst="git status"
 alias gl="git log"
 alias gaa="git add ."
+alias ga="git add"
 alias gth="git stash"
 
 # FOLDERS ALIAS
