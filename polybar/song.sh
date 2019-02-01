@@ -3,7 +3,7 @@
 # Get song info
 STATUS=$(playerctl status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-    SONG="$(playerctl SONG title)"
+    SONG="$(playerctl metadata title)"
 fi
 
 # Cut the first 32 chars
