@@ -213,4 +213,3 @@
 
     label-disconnected              = DISCONNECTED
     label-disconnected-foreground   = ${colors.foreground-alt}
-

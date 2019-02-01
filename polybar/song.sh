@@ -1,22 +1,22 @@
 #!/bin/bash
 
-# Get music status
-player_status=$(playerctl status 2> /dev/null)
+# Get song info
+STATUS=$(playerctl status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-    metadata="$(playerctl metadata title)"
+    SONG="$(playerctl SONG title)"
 fi
 
 # Cut the first 32 chars
-if [ $(echo $metadata | wc -c) -gt 32 ]; then
-    metadata=$(echo $metadata | cut -c1-32)
-    metadata=$(echo $metadata...)
+if [ $(echo $SONG | wc -c) -gt 32 ]; then
+    SONG=$(echo $SONG | cut -c1-32)
+    SONG=$(echo $SONG...)
 fi
 
 # Print the info to bar
-if [[ $player_status = "Playing" ]]; then
-    echo "%{F#FFFFFF}$metadata"
-elif [[ $player_status = "Paused" ]]; then
-    echo "%{F#9E9E9E}$metadata"
+if [[ $STATUS = "Playing" ]]; then
+    echo "%{F#FFFFFF}$SONG"
+elif [[ $STATUS = "Paused" ]]; then
+    echo "%{F#9E9E9E}$SONG"
 else
     echo "%{F#9E9E9E}NO MUSIC"
 fi
