@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Changes brightness
+# Changes brightness by 5
 if [ "$1" == "down" ]; then
     light -U 5
 elif [ "$1" == "up" ]; then
@@ -10,13 +10,13 @@ else
     exit 2
 fi
 
-# Gets the brightness label
-LABEL=$(light -G | cut -d '.' -f 1)
+# Gets the brightness level
+LEVEL=$(light -G | cut -d '.' -f 1)
 
-# Shows notification with brightness label
-VAR=$(cat ~/.dotfiles/dunst/.brightness)
-if [ $VAR -gt 0 ]; then
-    dunstify -p -r $VAR "BRIGHTNESS SET TO $LABEL%" > ~/.dotfiles/dunst/.brightness -u low
+# Shows notification with brightness level
+FILE=$(cat ~/.dotfiles/dunst/.brightness)
+if [ $FILE -gt 0 ]; then
+    dunstify -p -r $FILE "BRIGHTNESS SET TO $LEVEL%" > ~/.dotfiles/dunst/.brightness -u low
 else
-    dunstify -p "BRIGHTNESS SET TO $LABEL%" > ~/.dotfiles/dunst/.brightness -u low
+    dunstify -p "BRIGHTNESS SET TO $LEVEL%" > ~/.dotfiles/dunst/.brightness -u low
 fi
