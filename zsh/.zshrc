@@ -35,20 +35,26 @@ alias gth="git stash"
 # FOLDERS ALIAS
 alias hdd="sudo ntfs-3g /dev/sdb1 /mnt/hdd"
 
-# RANDOM ALIAS
+# PACKAGE ALIAS
 alias upd="sudo pacman -Syu --noconfirm"
 alias search="sudo pacman -S"
 alias remove="sudo pacman -R"
+
+# SHORTCUT ALIAS
 alias v="vim"
 alias rq="ranger -r ~/.dotfiles/ranger"
 alias la="ls -la"
 alias zshrs="source ~/.dotfiles/zsh/.zshrc"
+
+# DEV ALIAS
 alias fr="flutter run"
 alias frr="flutter run --release"
 alias fb="flutter build apk"
 alias fbr="flutter build apk --release"
 alias fupd="flutter upgrade"
 alias fd="flutter doctor -v"
+alias fpg="flutter packages get"
+alias fpu="flutter packages upgrade"
 
-# CUSTON ENV VARIABLES
+# ENV VARIABLES
 export PATH=$HOME/.flutter-sdk/bin:$PATH
