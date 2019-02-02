@@ -15,7 +15,7 @@ bindsym Super_R 				exec --no-startup-id "rofi -combi-modi window,drun -show com
 
 # APPS INIT
 exec_always --no-startup-id ~/.dotfiles/polybar/launch.sh
-exec --no-startup-id ~/.dotfiles/i3/init_stuff.sh
+exec --no-startup-id ~/.dotfiles/i3/init.sh
 
 # CHANGE FOCUS
 bindsym $mod+w 					focus up
