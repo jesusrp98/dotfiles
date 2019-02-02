@@ -1,14 +1,19 @@
 #!/bin/bash
 
+# ===============
+#  INITIAL SETUP
+# MADE BY CHECHU!
+# ===============
+
 # Clear the screen
 clear
 
-# Variables for Git user
+# Variables for git user account
 hostname=$(cat /etc/hostname)
 email=jesusrope98@outlook.com
 user=jesusrp98
 
-# Add Git info 
+# Add git info to local PC
 echo -e "=======ADDING GIT DATA=======\n"
 echo -e "\tUsername: $hostname"
 echo -e "\tEmail: $email"
@@ -16,13 +21,13 @@ git config --global user.name $hostname
 git config --global user.email $email
 echo -e "\tUser info added!"
 
-# Create & cat public RSA key
+# Add public RSA key to GitHub
 echo -e "\n=======CREATING SSH KEY & ADDING IT TO GITHUB======\n"
 ssh-keygen -qf "$HOME/.ssh/id_rsa" -t rsa -C "$email" -N ''
 curl -u "$user" --data "{\"title\":\"test-key\",\"key\":\"`cat $HOME/.ssh/id_rsa.pub`\"}" https://api.github.com/user/keys
 echo -e "\tSSH key added to GitHub!"
 
-# Clone dotfile repo from GitHub
+# Clone dotfiles repo from GitHub
 echo -e "\n=======CLOING DOTFILES REPO=======\n"
 mkdir $HOME/.dotfiles
 git clone git@github.com:jesusrp98/dotfiles.git $HOME/.dotfiles
@@ -35,10 +40,10 @@ echo -e "\tPacman packages installed!"
 
 # Install packages from AUR
 echo -e "\n=======INSTALL AUR PACKAGES=======\n"
-pacaur -S --noconfirm --noedit polybar spotify grub-customizer oh-my-zsh-git hsetroot dunstify light
+pacaur -S --noconfirm --noedit polybar spotify oh-my-zsh-git hsetroot dunstify light
 echo -e "\tAUR packages installed!"
 
-# Change shell
+# Change default shell
 echo -e "\n=======CHANGING DEFAULT SHELL=======\n"
 chsh -s /bin/zsh
 echo -e "\tShell changed!"
@@ -55,19 +60,16 @@ rm $HOME/.config/i3/config
 ln -s $HOME/.dotfiles/i3/config $HOME/.config/i3/config
 echo -e "\tLinks created!"
 
-# Update Lightdm config file
+# Update lightdm config file
 echo -e "\n=======CHANGING LIGHTDM CONFIG=======\n"
 sudo sed -i 's/^greeter-session=.*/greeter-session=lightdm-gtk-greeter/' /etc/lightdm/lightdm.conf
 echo -e "\tLightdm config changed!"
 
-# TODO improve
-# Update Grub2 config file if XPS
-if [ "$hostname" == "LINUX-XPS" ]; then
-    echo -e "\n=======CHANGING GRUB CONFIG=======\n"
-    sudo sed -i '/^GRUB_THEME=.*/d' /etc/default/grub
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
-    echo -e "\tGrub2 config changed!"
-fi
+# Update grub2 config file
+echo -e "\n=======CHANGING GRUB CONFIG=======\n"
+sudo sed -i '/^GRUB_TIMEOUT=.*/c\GRUB_TIMEOUT=0' /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+echo -e "\tGrub2 config changed!"
 
 # TODO improve
 # Update sudo config file
