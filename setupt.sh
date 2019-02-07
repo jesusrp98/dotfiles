@@ -40,7 +40,7 @@ echo -e "\tPacman packages installed!"
 
 # Install packages from AUR
 echo -e "\n=======INSTALL AUR PACKAGES=======\n"
-pacaur -S --noconfirm --noedit polybar spotify oh-my-zsh-git hsetroot dunstify light
+pacaur -S --noconfirm --noedit polybar spotify oh-my-zsh-git hsetroot dunstify light etcher
 echo -e "\tAUR packages installed!"
 
 # Change default shell
