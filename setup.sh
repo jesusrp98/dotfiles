@@ -75,6 +75,6 @@ echo -e "\tGrub2 config changed!"
 
 # TODO improve
 # Update sudo config file
-echo -e "\n=======CHANGING SUDO CONFIG=======\n"
-sudo echo "jesus ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/10-installer
-echo -e "\tSudo config changed!"
+# echo -e "\n=======CHANGING SUDO CONFIG=======\n"
+# sudo echo "jesus ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/10-installer
+# echo -e "\tSudo config changed!"
