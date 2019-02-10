@@ -37,7 +37,7 @@ echo -e "\tRepo cloned!"
 
 # Install packages from pacman
 echo -e "\n=======INSTALL REGULAR PACKAGES=======\n"
-sudo pacman -S --noconfirm i3-gaps adapta-gtk-theme rofi ranger vim compton dunst zsh telegram-desktop lxappearance redshift polkit-gnome gnome-keyring lightdm-gtk-greeter i3lock blueman playerctl pacaur lightdm-gtk-greeter python-pip vlc termite hsetroot light etcher
+sudo pacman -S --noconfirm i3-gaps adapta-gtk-theme rofi ranger vim compton dunst zsh telegram-desktop lxappearance redshift polkit-gnome gnome-keyring lightdm-gtk-greeter i3lock blueman playerctl pacaur lightdm-gtk-greeter python-pip vlc termite hsetroot light etcher code
 echo -e "\tPacman packages installed!"
 
 # Install packages from AUR
