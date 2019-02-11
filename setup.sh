@@ -71,6 +71,13 @@ sudo sed -i '/^GRUB_TIMEOUT=.*/c\GRUB_TIMEOUT=0' /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 echo -e "\tGrub2 config changed!"
 
+# Download Flutter SDK
+echo -e "\n=======DOWNLOAD FLUTTER SDK=======\n"
+wget -qO /tmp/flutter.tar.xz 'https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.0.0-stable.tar.xz'
+tar xf /tmp/flutter.tar.xz
+mv $HOME/flutter $HOME/.flutter-sdk
+echo -e "\tFlutter SDK downloaded!"
+
 # TODO improve
 # Update sudo config file
 # echo -e "\n=======CHANGING SUDO CONFIG=======\n"
