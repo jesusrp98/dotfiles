@@ -31,6 +31,7 @@ alias gl="git log"
 alias gaa="git add ."
 alias ga="git add"
 alias gth="git stash"
+alias gck="git checkout"
 
 # FOLDERS ALIAS
 alias hdd="sudo ntfs-3g /dev/sdb1 /mnt/hdd"
