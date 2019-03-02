@@ -73,7 +73,7 @@ echo -e "\tGrub2 config changed!"
 
 # Download Flutter SDK
 echo -e "\n=======DOWNLOAD FLUTTER SDK=======\n"
-wget -O /tmp/flutter.tar.xz 'https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.0.0-stable.tar.xz'
+wget -O /tmp/flutter.tar.xz 'https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.2.1-stable.tar.xz'
 tar xf /tmp/flutter.tar.xz
 mv flutter $HOME/.flutter-sdk
 echo -e "\tFlutter SDK downloaded!"
