@@ -36,6 +36,9 @@
     scroll-up                       = i3wm-wsnext
     scroll-down                     = i3wm-wsprev
 
+	tray-position 					= right
+	tray-padding 					= 3
+
 ; LINUX-XPS BAR PROPERTIES
 [bar/xps]
     monitor 						= eDP-1
