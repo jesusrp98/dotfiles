@@ -8,6 +8,9 @@ ZSH=/usr/share/oh-my-zsh/
 ZSH_THEME="cypher"
 source $ZSH/oh-my-zsh.sh
 
+# PLUGINS
+plugins=(colored-man-pages copydir copyfile)
+
 # DOTFILES ALIAS
 alias zshconfig="vim ~/.dotfiles/zsh/.zshrc"
 alias i3config="vim ~/.dotfiles/i3/config"
