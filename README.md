@@ -1,8 +1,8 @@
-# Dotfiles from Chechu
-This repository contains the configuration files used in the PC & XPS devices from Chechu.
+# Personal dotfiles
+This repository contains the configuration files I use in both desktop & laptop devices.
 
 ### What is a 'dotfile'?
-The term 'dotfile' refers to hidden config files from most apps on GNU/Linux systems, like Bash (.bashrc) or Vim (.vimrc). Notice the '.' at the start of the name file, thus 'dotfile' :). They are hidden by default in most file explorers by default, like Nautilus.
+The term `dotfile` refers to hidden config files from most apps on GNU+Linux systems, like Bash (`.bashrc`) or Vim (`.vimrc`). Notice the `.` at the start of the name file, thus 'dotfile' :). They are hidden by default in most file explorers by default, like Nautilus.
 
 ## System configuration
 List of core packages listed below.
