@@ -51,7 +51,7 @@
 
     modules-left        			= i3 xwindow
     modules-center      			= time 
-    modules-right       			= volume_xps temperature_intel memory battery brightness wireless
+    modules-right       			= volume_xps brightness battery memory wireless
 
     fixed-center        			= true
     module-margin-left  			= 3
