@@ -20,7 +20,7 @@
 	rofi.display-run:
 	rofi.display-window:
 	rofi.display-drun:
-	rofi.display-combi:Search:   
+	rofi.display-combi:Search:
 
 ! KEY BINDINGS
 	rofi.kb-accept-alt: Alt+Return
