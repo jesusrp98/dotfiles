@@ -18,7 +18,7 @@
     monitor-fallback                = HDMI-1
 
     width                           = 100%
-    height                          = 28
+    height                          = 29
     padding-right                   = 2
 
     background                      = ${colors.background}
@@ -26,9 +26,9 @@
 
     font-0                          = Roboto Mono: pixelsize=11: weight=medium; 3
 
-    modules-left                    = i3 xwindow
+    modules-left                    = i3 window
     modules-center                  = time
-    modules-right                   = song pulseaudio temperature_ryzen memory lan
+    modules-right                   = song volume temp_amd memory lan
 
     fixed-center                    = true
     module-margin-left              = 3
@@ -41,17 +41,17 @@
     monitor 						= eDP-1
 
     width               			= 100%
-    height              			= 28
+    height              			= 29
     padding-right       			= 2
 
     background          			= ${colors.background}
     foreground          			= ${colors.foreground}
 
-    font-0              			= Roboto Mono: pixelsize=11: weight=medium; 2
+    font-0              			= Roboto Mono: pixelsize=11: weight=medium; 3
 
-    modules-left        			= i3 xwindow
+    modules-left        			= i3 window
     modules-center      			= time 
-    modules-right       			= volume_xps brightness battery memory wireless
+    modules-right       			= volume brightness battery memory wireless
 
     fixed-center        			= true
     module-margin-left  			= 3
@@ -83,7 +83,7 @@
     label-urgent-padding 			= 1
 
 ; ACTIVE WINDOW INFO
-[module/xwindow]
+[module/window]
     type 							= internal/xwindow
 
     label 							= %title%
@@ -110,7 +110,7 @@
     scroll-down                     = playerctl next
 
 ; VOLUME CONTROL
-[module/pulseaudio]
+[module/volume]
     type                            = internal/pulseaudio
     interval                        = 1
 
@@ -121,40 +121,16 @@
     label-muted-foreground 			= ${colors.foreground-alt}
     ramp-volume-0                   = VOLUME 
 
-; VOLUME CONTROL
-[module/volume]
-    type                            = custom/script
-    exec                            = ~/.dotfiles/polybar/volume.sh
-    interval                        = 0
-    tail                            = true
-
-    click-left                      = ~/.dotfiles/dunst/volume.sh mute
-    scroll-up                       = ~/.dotfiles/dunst/volume.sh up
-    scroll-down                     = ~/.config/dunst/volume.sh down
-
-; VOLUME CONTROL FOR XPS
-[module/volume_xps]
-    type 							= internal/alsa
-    interval                        = 1
-
-    format-volume 					= <ramp-volume> <label-volume>
-    label-volume 					= %percentage%%
-    label-volume-foreground 		= ${colors.foreground-alt}
-
-    format-mute 					= <label-muted>
-    label-muted 					= MUTED
-    label-muted-foreground 			= ${colors.foreground-alt}
-    ramp-volume-0                   = VOLUME
-
-; CPU TEMP FOR LINUX-XPS
-[module/temperature_intel]
-    type 							= internal/temperature
+; CPU TEMP FOR LINUX-PC
+[module/temp_amd]
+    type                            = internal/temperature
+    hwmon-path                      = /sys/class/hwmon/hwmon0/temp1_input
     interval                        = 5
-    format-prefix 					= "TEMP "
+    format-prefix                   = "TEMP "
 
-    label 							= %temperature-c%
-    label-foreground 				= ${colors.foreground-alt}
-    label-warn-foreground 			= ${colors.alert} 
+    label                           = %temperature-c%
+    label-foreground                = ${colors.foreground-alt}
+    label-warn-foreground           = ${colors.alert}
 
 ; RAM USSAGE
 [module/memory]
@@ -181,13 +157,14 @@
 
 ; BRIGHTNESS LEVEL
 [module/brightness]
-    type                            = custom/script
-    exec                            = ~/.dotfiles/polybar/bright.sh
-    interval                        = 0
-    tail                            = true
+    type                            = internal/xbacklight
+    enable-scroll                   = true
 
-    scroll-up                       = ~/.dotfiles/dunst/bright.sh up
-    scroll-down                     = ~/.dotfiles/dunst/bright.sh down
+    format                          = <ramp> <label>
+
+    ramp-0                          = BRIGHT
+
+    label-foreground 				= ${colors.foreground-alt}
 
 ; WIRELESS CONNECTION
 [module/wireless]
