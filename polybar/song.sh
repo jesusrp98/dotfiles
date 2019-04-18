@@ -3,7 +3,7 @@
 # Get song info
 STATUS=$(playerctl status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-    SONG=$(echo "$(playerctl metadata title)" | sed -r 's/^(.+) - .+$/\1/' | sed -r 's/^(.+) \(.+\)$/\1/')
+    SONG=$(echo "$(playerctl metadata title)" | sed -r 's/^(.+) - .+/\1/' | sed -r 's/^(.+) \(.+\)/\1/' | sed -r 's/^(.+) \[.+\]/\1/')
 fi
 
 # Cut the first 32 chars
