@@ -28,13 +28,13 @@
 
     modules-left                    = i3 xwindow
     modules-center                  = time
-    modules-right                   = song volume temperature_ryzen memory lan
+    modules-right                   = song pulseaudio temperature_ryzen memory lan
 
     fixed-center                    = true
     module-margin-left              = 3
 
-    scroll-up                       = i3wm-wsnext
-    scroll-down                     = i3wm-wsprev
+    tray-position 					= right
+	tray-padding 					= 0
 
 ; LINUX-XPS BAR PROPERTIES
 [bar/xps]
@@ -56,11 +56,8 @@
     fixed-center        			= true
     module-margin-left  			= 3
 
-    scroll-up           			= i3wm-wsnext
-    scroll-down         			= i3wm-wsprev
-
 	tray-position 					= right
-	tray-padding 					= 3
+	tray-padding 					= 0
 
 ; i3 WORKSPACES
 [module/i3]
@@ -105,17 +102,31 @@
 [module/song]
     type                            = custom/script
     exec                            = ~/.dotfiles/polybar/song.sh
-    interval                        = 2
+    interval                        = 0
+    tail                            = true
 
     click-left                      = playerctl play-pause
-    scroll-up                       = playerctl next
-    scroll-down                     = playerctl previous
+    scroll-up                       = playerctl previous
+    scroll-down                     = playerctl next
+
+; VOLUME CONTROL
+[module/pulseaudio]
+    type                            = internal/pulseaudio
+    interval                        = 1
+
+    format-volume 					= <ramp-volume> <label-volume>
+    label-volume-foreground 		= ${colors.foreground-alt}
+    
+    label-muted 					= MUTED
+    label-muted-foreground 			= ${colors.foreground-alt}
+    ramp-volume-0                   = VOLUME 
 
 ; VOLUME CONTROL
 [module/volume]
     type                            = custom/script
     exec                            = ~/.dotfiles/polybar/volume.sh
-    interval                        = 2
+    interval                        = 0
+    tail                            = true
 
     click-left                      = ~/.dotfiles/dunst/volume.sh mute
     scroll-up                       = ~/.dotfiles/dunst/volume.sh up
@@ -124,6 +135,7 @@
 ; VOLUME CONTROL FOR XPS
 [module/volume_xps]
     type 							= internal/alsa
+    interval                        = 1
 
     format-volume 					= <ramp-volume> <label-volume>
     label-volume 					= %percentage%%
@@ -144,32 +156,20 @@
     label-foreground 				= ${colors.foreground-alt}
     label-warn-foreground 			= ${colors.alert} 
 
-; CPU TEMP FOR LINUX-PC (RYZEN ONLY)
-; HWMON REQUIRED FOR RYZEN CPU
-[module/temperature_ryzen]
-    type                            = internal/temperature
-    hwmon-path                      = /sys/class/hwmon/hwmon0/temp1_input
-    interval                        = 5
-    format-prefix                   = "TEMP "
-
-    label                           = %temperature-c%
-    label-foreground                = ${colors.foreground-alt}
-    label-warn-foreground           = ${colors.alert}
-
 ; RAM USSAGE
 [module/memory]
     type 							= internal/memory
-    interval                        = 5 
+    interval                        = 5
     format-prefix 					= "RAM "
 
     label 							= %gb_used%
     label-foreground 				= ${colors.foreground-alt}
 
-; BATTERY
+; BATTERY INFORMATION
 [module/battery]
 	type 							= internal/battery
 	battery 						= BAT0
-    interval                        = 5
+    interval                        = 60
 	adapter 						= AC
 	full-at 						= 99
 
@@ -179,11 +179,12 @@
 	label-charging-foreground 		= ${colors.foreground}
 	label-discharging-foreground 	= ${colors.foreground-alt}
 
-; BRIGHTNESS
+; BRIGHTNESS LEVEL
 [module/brightness]
     type                            = custom/script
     exec                            = ~/.dotfiles/polybar/bright.sh
-    interval                        = 5
+    interval                        = 0
+    tail                            = true
 
     scroll-up                       = ~/.dotfiles/dunst/bright.sh up
     scroll-down                     = ~/.dotfiles/dunst/bright.sh down
