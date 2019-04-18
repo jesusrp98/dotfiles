@@ -90,7 +90,7 @@
     type 							= internal/xwindow
 
     label 							= %title%
-    label-maxlen 					= 70
+    label-maxlen 					= 50
 
 ; DATE & TIME
 [module/time]
