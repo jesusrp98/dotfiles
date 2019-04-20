@@ -189,5 +189,9 @@
     label-connected-foreground      = ${colors.foreground-alt}
     ramp-signal-0                   = NET
 
-    label-disconnected              = DISCONNECTED
+    label-disconnected              = NO NET
     label-disconnected-foreground   = ${colors.foreground-alt}
+
+    format-packetloss               = <label-packetloss>
+    label-packetloss                = NO DATA
+    label-packetloss-foreground     = ${colors.foreground-alt}
