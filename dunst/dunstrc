@@ -40,7 +40,7 @@
     show_indicators 		= no
 
     icon_position 			= left
-    max_icon_size           = 48
+    max_icon_size           = 40
 
     dmenu 					= /usr/bin/dmenu -p dunst:
     browser 				= /usr/bin/firefox -new-tab
@@ -59,7 +59,7 @@
 [urgency_low]
     background 				= "#222D32"
     foreground 				= "#FFFFFF"
-    timeout 				= 3
+    timeout 				= 1
 
 [urgency_normal]
     background 				= "#222D32"
