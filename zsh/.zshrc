@@ -34,7 +34,7 @@ alias ga="git add"
 alias gth="git stash"
 alias gck="git checkout"
 
-# PACKAGE ALIAS
+# PACKAGE MANAGER ALIAS
 alias upd="sudo pacman -Syu --noconfirm"
 alias search="sudo pacman -Ss"
 alias remove="sudo pacman -R"
@@ -47,7 +47,10 @@ alias zshrs="source ~/.dotfiles/zsh/.zshrc"
 
 # DEV ALIAS
 alias fr="flutter run"
+alias frv="flutter run -v"
 alias frr="flutter run --release"
+alias fd="flutter doctor"
+alias fdv="flutter doctor -v"
 alias fb="flutter build apk"
 alias fbr="flutter build apk --release"
 alias fpg="flutter packages get"
