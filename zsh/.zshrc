@@ -35,7 +35,7 @@ alias gth="git stash"
 alias gck="git checkout"
 
 # PACKAGE ALIAS
-alias upd="sudo pacman -Syu --noconfirm"
+alias upd="pacaur -Syu --noconfirm --noedit"
 alias search="sudo pacman -Ss"
 alias remove="sudo pacman -R"
 
