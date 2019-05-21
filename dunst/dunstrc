@@ -6,10 +6,11 @@
 [global]
     follow 					= mouse
 
-    geometry 				= "300x3-16+44"
+    geometry 				= "300x2-16+44"
     indicate_hidden 		= yes
+    shrink                  = no
 
-    separator_height 		= 3
+    separator_height 		= 0
     padding					= 8
     horizontal_padding 		= 8
 
@@ -19,7 +20,7 @@
 
     sort 					= yes
 
-    idle_threshold 			= 120
+    idle_threshold 			= 0
 
     font 					= Roboto Mono Medium 11
     line_height 			= 0
@@ -38,7 +39,8 @@
     hide_duplicate_count 	= false
     show_indicators 		= no
 
-    icon_position 			= off
+    icon_position 			= left
+    max_icon_size           = 40
 
     dmenu 					= /usr/bin/dmenu -p dunst:
     browser 				= /usr/bin/firefox -new-tab
@@ -51,19 +53,22 @@
 [experimental]
     per_monitor_dpi 		= false
 
+[shortcuts]
+    close_all = mod1+space
+
 [urgency_low]
     background 				= "#222D32"
     foreground 				= "#FFFFFF"
-    timeout 				= 2
+    timeout 				= 1
 
 [urgency_normal]
     background 				= "#222D32"
     foreground 				= "#FFFFFF"
-    timeout 				= 5
+    timeout 				= 3
 
 [urgency_critical]
     background 				= "#222D32"
     foreground 				= "#FFFFFF"
     frame_color 			= "#BD2C40"
-    timeout 				= 10
+    timeout 				= 5
     
