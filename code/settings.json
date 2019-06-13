@@ -1,0 +1,39 @@
+// ===============
+// VS CODE DOTFILE
+// MADE BY CHECHU!
+// ===============
+
+{
+    // WORKBENCH
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.settings.editor": "json",
+    "workbench.colorTheme": "Material Theme High Contrast",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.editor.closeEmptyGroups": true,
+    "workbench.editor.showIcons": true,
+    "workbench.tree.indent": 8,
+    "workbench.tips.enabled": false,
+
+    // UPDATES
+    "extensions.autoCheckUpdates": true,
+
+    // WINDOW
+    "window.menuBarVisibility": "toggle",
+
+    // EDITOR
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.renderIndentGuides": false,
+    "editor.renderWhitespace": "none",
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.copyWithSyntaxHighlighting": false,
+    "diffEditor.renderSideBySide": true,
+
+    // FILES
+    "files.autoSaveDelay": 1000,
+    "files.autoSave": "afterDelay",
+
+    // FLUTTER
+    "dart.flutterSdkPath": "/home/jesus/.flutter-sdk",
+    "explorer.confirmDragAndDrop": false,
+}
