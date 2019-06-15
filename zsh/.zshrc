@@ -5,8 +5,8 @@
 
 # MAIN SETTINGS
 ZSH=/usr/share/oh-my-zsh/
-ZSH_THEME="cypher"
 source $ZSH/oh-my-zsh.sh
+PROMPT="%{${fg_bold[blue]}%}%{${fg[green]}%}%3~%(0?. . %{${fg[red]}%}%? )%{${fg[blue]}%}>%{${reset_color}%} "
 
 # PLUGINS
 plugins=(colored-man-pages copydir copyfile)
