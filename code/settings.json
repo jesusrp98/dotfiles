@@ -5,35 +5,30 @@
 
 {
     // WORKBENCH
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.settings.editor": "json",
     "workbench.colorTheme": "Material Theme High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons",
-    "workbench.editor.closeEmptyGroups": true,
-    "workbench.editor.showIcons": true,
-    "workbench.tree.indent": 8,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.settings.editor": "json",    
     "workbench.tips.enabled": false,
 
-    // UPDATES
-    "extensions.autoCheckUpdates": true,
-
     // WINDOW
+    "window.title": "${activeEditorShort}${separator}Code",
     "window.menuBarVisibility": "toggle",
 
     // EDITOR
+    "editor.copyWithSyntaxHighlighting": false,
     "editor.cursorSmoothCaretAnimation": true,
     "editor.renderIndentGuides": false,
-    "editor.renderWhitespace": "none",
+    "editor.cursorBlinking": "phase",
     "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.copyWithSyntaxHighlighting": false,
-    "diffEditor.renderSideBySide": true,
+    "editor.mouseWheelZoom": true,
 
     // FILES
-    "files.autoSaveDelay": 1000,
     "files.autoSave": "afterDelay",
+
+    // MISCELLANEOUS
+    "telemetry.enableTelemetry": false,
 
     // FLUTTER
     "dart.flutterSdkPath": "/home/jesus/.flutter-sdk",
-    "explorer.confirmDragAndDrop": false,
 }
