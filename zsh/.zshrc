@@ -36,7 +36,7 @@ alias gth="git stash"
 alias gck="git checkout"
 
 # PACKAGE MANAGER ALIAS
-alias upd="yay -Syu --noconfirm --noedit"
+alias upd="yay -Syu --noconfirm"
 alias install="yay -S"
 alias search="yay -Ss"
 alias remove="yay -R"
