@@ -20,7 +20,7 @@
 #window {
     background-color: 		@background;
     border:           		3;
-    padding:          		5;
+    padding:          		4;
 }
 
 #textbox {
@@ -28,11 +28,11 @@
 }
 
 #listview {
-    padding: 				5px 0px 0px;
+    padding: 				4px 0px 0px;
 }
 
 #element {
-    padding: 				7px ;
+    padding: 				10px ;
 }
 
 #element.normal.normal {
@@ -79,5 +79,5 @@
 #inputbar {
     spacing:    			0;
     text-color: 			@foreground;
-    padding:    			5px ;
+    padding:    			8px;
 }

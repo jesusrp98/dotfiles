@@ -10,8 +10,8 @@ font pango:                     Roboto Mono Medium 11
 # BASIC BINDINGS
 bindsym $mod+q 					exec --no-startup-id termite
 bindsym $mod+Escape 			kill
-bindsym Super_L 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -config ~/.dotfiles/rofi/config"
-bindsym Super_R 				exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi -config ~/.dotfiles/rofi/config"
+bindsym Super_L 				exec --no-startup-id "rofi -show drun -config ~/.dotfiles/rofi/config"
+bindsym Super_R 				exec --no-startup-id "rofi -show drun -config ~/.dotfiles/rofi/config"
 
 # APPS INIT
 exec_always --no-startup-id ~/.dotfiles/polybar/launch.sh

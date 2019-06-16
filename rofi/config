@@ -6,12 +6,11 @@
 ! ROFI THEME
 	rofi.theme: ~/.dotfiles/rofi/theme.rasi
 	rofi.show-icons: true
-	rofi.show-match: true
 
-	rofi.lines: 16
+	rofi.lines: 12
 	rofi.scroll-method: 1
 	rofi.cycle: false 
-	rofi.width: 50
+	rofi.width: 36
 
 	rofi.location: 0
 	rofi.case-sensitive: false
@@ -20,7 +19,7 @@
 	rofi.display-run:
 	rofi.display-window:
 	rofi.display-drun:
-	rofi.display-combi:Search:
+	rofi.display-ssh:
 
 ! KEY BINDINGS
 	rofi.kb-accept-alt: Alt+Return
