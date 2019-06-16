@@ -28,7 +28,7 @@
 
     modules-left                    = i3 window
     modules-center                  = time
-    modules-right                   = song volume temp_amd memory lan
+    modules-right                   = song volume temp_amd memory
 
     fixed-center                    = true
     module-margin-left              = 3
@@ -51,7 +51,7 @@
 
     modules-left        			= i3 window
     modules-center      			= time 
-    modules-right       			= volume brightness battery memory wireless
+    modules-right       			= volume brightness battery memory
 
     fixed-center        			= true
     module-margin-left  			= 3
@@ -195,3 +195,4 @@
     format-packetloss               = <label-packetloss>
     label-packetloss                = NO DATA
     label-packetloss-foreground     = ${colors.foreground-alt}
+    
