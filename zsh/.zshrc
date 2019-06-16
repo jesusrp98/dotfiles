@@ -36,9 +36,10 @@ alias gth="git stash"
 alias gck="git checkout"
 
 # PACKAGE MANAGER ALIAS
-alias upd="pacaur -Syu --noconfirm --noedit"
-alias search="sudo pacman -Ss"
-alias remove="sudo pacman -R"
+alias upd="yay -Syu --noconfirm --noedit"
+alias install="yay -S"
+alias search="yay -Ss"
+alias remove="yay -R"
 
 # SHORTCUT ALIAS
 alias v="vim"
