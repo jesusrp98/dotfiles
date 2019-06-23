@@ -12,7 +12,7 @@
     "workbench.tips.enabled": false,
 
     // WINDOW
-    "window.title": "${activeEditorShort}${separator}Code",
+    "window.title": "${rootName}${separator}Code",
     "window.menuBarVisibility": "toggle",
 
     // EDITOR
