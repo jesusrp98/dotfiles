@@ -6,7 +6,7 @@
 # MAIN SETTINGS
 ZSH=/usr/share/oh-my-zsh/
 source $ZSH/oh-my-zsh.sh
-PROMPT="%{${fg_bold[blue]}%}%{${fg[green]}%}%6~
+PROMPT="%{${fg_bold[blue]}%}%{${fg[green]}%}%3~
 %(0?..%{${fg[red]}%}%? )%{${fg[blue]}%}>%{${reset_color}%} "
 
 # PLUGINS
