@@ -22,11 +22,13 @@ alias roficonfig="vim ~/.dotfiles/rofi/config"
 alias zshconfig="vim ~/.dotfiles/zsh/.zshrc"
 alias termiteconfig="vim ~/.dotfiles/termite/config"
 alias vimconfig="vim ~/.dotfiles/vim/vimrc"
+alias synapticsconfig="vim ~/.dotfiles/xorg/synaptics.conf"
 
 # GIT ALIAS
 alias gcl="git clone"
 alias gc="git commit -m"
 alias gps="git push"
+alias gpso="git push origin"
 alias gpl="git pull"
 alias gst="git status"
 alias gl="git log"
@@ -34,6 +36,8 @@ alias gaa="git add ."
 alias ga="git add"
 alias gth="git stash"
 alias gck="git checkout"
+alias gcb="git checkout -b"
+alias gab="git branch -a"
 
 # PACKAGE MANAGER ALIAS
 alias upd="yay -Syu --noconfirm"
