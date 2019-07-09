@@ -8,7 +8,7 @@
     "workbench.colorTheme": "Material Theme High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.settings.editor": "json",    
+    "workbench.settings.editor": "json",
     "workbench.tips.enabled": false,
 
     // WINDOW
@@ -35,4 +35,13 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+
+    // FILES
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    // PRETTIER
+    "prettier.eslintIntegration": true,
+    "prettier.stylelintIntegration": true,
+    "prettier.tabWidth": 2,
 }
