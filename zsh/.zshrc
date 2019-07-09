@@ -59,7 +59,6 @@ alias fpu="flutter packages upgrade"
 
 # ENV VARIABLES
 export PATH=$HOME/.flutter-sdk/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 export GTK_CSD=0
 export LD_PRELOAD=/usr/lib/libgtk3-nocsd.so.0
 
