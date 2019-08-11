@@ -1,17 +1,18 @@
 /** ===============
 *      ROFI THEME
 *   MADE BY CHECHU!
-*   =============== **/
+*   ===============
+**/
 
 /** COLORS & FONT **/
 * {
-    background:             rgba (34, 45, 50, 100%);
-    background-alternate:   rgba (41, 55, 61, 100%);
-    selected-background:    rgba (0, 131, 143, 100%);
-    foreground:             White;
+    background:             rgb(034, 045, 050);
+    background-alt:         rgb(041, 055, 061);
+    accent:                 rgb(000, 135, 153);
+    foreground:             rgb(225, 231, 234);
 
-    border-color:           @selected-background;
-    background-color:		rgba (0, 0, 0, 0 %);
+    border-color:           @accent;
+    background-color:		@background;
 
     font:					"Roboto Mono Medium 11";
 }
@@ -41,17 +42,17 @@
 }
 
 #element.selected.normal {
-    background-color: 		@selected-background;
+    background-color: 		@accent;
     text-color:       		@foreground;
 }
 
 #element.alternate.normal {
-    background-color: 		@background-alternate;
+    background-color: 		@background-alt;
     text-color:       		@foreground;
 }
 
 #element.selected.active {
-    background-color: 		@selected-background;
+    background-color: 		@accent;
     text-color:       		@foreground;
 }
 
@@ -61,7 +62,7 @@
 }
 
 #element.alternate.active {
-    background-color: 		@background-alternate;
+    background-color: 		@background-alt;
     text-color:       		@foreground;
 }
 

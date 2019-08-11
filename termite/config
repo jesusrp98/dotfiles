@@ -20,8 +20,8 @@
 
 # Terminal colors
 [colors]
-    foreground              = #FFFFFF
-    foreground_bold         = #FFFFFF
+    foreground              = #E1E7EA
+    foreground_bold         = #E1E7EA
     background              = #222D32
 
     color0                  = #2E3436
