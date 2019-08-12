@@ -6,10 +6,9 @@
 ; COLOR PALLETTE
 [colors]
     background 						= #222D32
-    desktop         				= #151B1E
-    foreground 						= #FFFFFF
-    foreground-alt 					= #9E9E9E
-    accent          				= #00838F
+    foreground 						= #E1E7EA
+    foreground-alt 					= #9CA4A8
+    accent          				= #008799
     alert 							= #BD2C40
 
 ; LINUX-PC BAR PROPERTIES

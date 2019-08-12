@@ -62,17 +62,16 @@ bindsym $mod+Shift+e 			move scratchpad
 bindsym $mod+e                  scratchpad show, resize set $floating-size, move position center
 
 # WINDOW COLORS
-set $focused-color 	    		#00838F
-set $unfocused-color    		#222D32
-set $text-color         		#FFFFFF
-set $urgent-color 	    		#BD2C40
-set $indicator-color			#BD2C40
+set $accent 	    		    #008799
+set $background    		        #222D32
+set $foreground         		#E1E7EA
+set $alert 	    		        #BD2C40
 
 # WINDOW MODE               	BORDER              BACKGROUND         TEXT 		    INDICATOR
-client.focused              	$focused-color      $focused-color     $text-color	    $indicator-color
-client.unfocused            	$unfocused-color    $unfocused-color   $text-color	    $indicator-color
-client.focused_inactive     	$unfocused-color    $unfocused-color   $text-color      $indicator-color
-client.urgent               	$urgent-color       $urgent-color      $text-color      $indicator-color
+client.focused              	$accent             $accent            $foreground	    $alert
+client.unfocused            	$background         $background        $foreground	    $alert
+client.focused_inactive     	$background         $background        $foreground      $alert
+client.urgent               	$alert              $alert             $foreground      $alert
 
 # RESIZE MODE
 bindsym $mod+r                  mode "RESIZE"

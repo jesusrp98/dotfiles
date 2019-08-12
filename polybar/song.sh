@@ -14,9 +14,9 @@ fi
 
 # Print the info to bar
 if [[ $STATUS = "Playing" ]]; then
-    echo "%{F#FFFFFF}$SONG"
+    echo "%{F#E1E7EA}$SONG"
 elif [[ $STATUS = "Paused" ]]; then
-    echo "%{F#9E9E9E}$SONG"
+    echo "%{F#9CA4A8}$SONG"
 else
-    echo "%{F#9E9E9E}NO MUSIC"
+    echo "%{F#9CA4A8}NO MUSIC"
 fi
