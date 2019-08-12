@@ -111,7 +111,7 @@ for_window [class="Spotify"]    floating enable, resize set $floating-size, move
 # AUDIO CONTROLS
 bindsym XF86AudioRaiseVolume 	exec --no-startup-id ~/.dotfiles/dunst/volume.sh up
 bindsym XF86AudioLowerVolume 	exec --no-startup-id ~/.dotfiles/dunst/volume.sh down
-bindsym XF86AudioMute        	exec --no-startup-id ~/.dotfiles/dunst/volume.sh mute	
+bindsym XF86AudioMute        	exec --no-startup-id ~/.dotfiles/dunst/volume.sh mute
 
 # BRIGHTNESS CONTROL
 bindsym XF86MonBrightnessUp 	exec --no-startup-id ~/.dotfiles/dunst/bright.sh up
