@@ -150,9 +150,11 @@
 
 	format-charging 				= BAT <label-charging>
 	format-discharging 				= BAT <label-discharging>
+    format-full 	                = BAT <label-full>
 
 	label-charging-foreground 		= ${colors.foreground}
 	label-discharging-foreground 	= ${colors.foreground-alt}
+    label-full-foreground 	        = ${colors.foreground}
 
 ; BRIGHTNESS LEVEL
 [module/brightness]
