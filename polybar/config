@@ -148,9 +148,9 @@
 	adapter 						= AC
 	full-at 						= 99
 
-	format-charging 				= BAT <label-charging>
-	format-discharging 				= BAT <label-discharging>
-    format-full 	                = BAT <label-full>
+	format-charging 				= POWER <label-charging>
+	format-discharging 				= POWER <label-discharging>
+    format-full 	                = POWER <label-full>
 
 	label-charging-foreground 		= ${colors.foreground}
 	label-discharging-foreground 	= ${colors.foreground-alt}

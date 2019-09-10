@@ -47,4 +47,5 @@
 
     // EXPLORER
     "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false
 }
