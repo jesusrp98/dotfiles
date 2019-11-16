@@ -32,16 +32,11 @@
     // FLUTTER
     "dart.flutterSdkPath": "/home/jesus/.flutter-sdk",
     "window.zoomLevel": 0,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
 
     // FILES
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
-
-    // PRETTIER
-    "prettier.eslintIntegration": true,
-    "prettier.stylelintIntegration": true,
     "prettier.tabWidth": 2,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false
 }

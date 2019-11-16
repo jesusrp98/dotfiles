@@ -64,9 +64,11 @@ alias fpu="flutter packages upgrade"
 
 # ENV VARIABLES
 export PATH=$HOME/.flutter-sdk/bin:$PATH
+export PATH=$HOME/.flutter-sdk/bin/cache/dart-sdk/bin:$PATH
 export GTK_CSD=0
 export LD_PRELOAD=/usr/lib/libgtk3-nocsd.so.0
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export BROWSER=/usr/bin/firefox
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
