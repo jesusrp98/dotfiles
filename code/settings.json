@@ -37,6 +37,8 @@
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "prettier.tabWidth": 2,
+
+    // EXPLORER
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false
 }
