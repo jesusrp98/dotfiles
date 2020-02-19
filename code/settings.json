@@ -2,43 +2,42 @@
 // VS CODE DOTFILE
 // MADE BY CHECHU!
 // ===============
-
 {
     // WORKBENCH
-    "workbench.colorTheme": "Material Theme High Contrast",
+    "workbench.colorTheme": "Community Material Theme High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.settings.editor": "json",
     "workbench.tips.enabled": false,
-
     // WINDOW
     "window.title": "${rootName}${separator}Code",
     "window.menuBarVisibility": "toggle",
-
     // EDITOR
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.copyWithSyntaxHighlighting": false,
     "editor.cursorSmoothCaretAnimation": true,
     "editor.renderIndentGuides": false,
     "editor.cursorBlinking": "phase",
     "editor.minimap.enabled": false,
     "editor.mouseWheelZoom": true,
-
     // FILES
     "files.autoSave": "afterDelay",
-
     // MISCELLANEOUS
     "telemetry.enableTelemetry": false,
-
     // FLUTTER
     "dart.flutterSdkPath": "/home/jesus/.flutter-sdk",
     "window.zoomLevel": 0,
-
     // FILES
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "prettier.tabWidth": 2,
-
     // EXPLORER
     "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
