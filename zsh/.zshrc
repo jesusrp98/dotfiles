@@ -72,3 +72,4 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export BROWSER=/usr/bin/firefox
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+export ANDROID_HOME="$HOME/Android/Sdk"
