@@ -5,7 +5,7 @@
 
 {
     // WORKBENCH
-    "workbench.colorTheme": "Material Theme High Contrast",
+    "workbench.colorTheme": "Community Material Theme High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.settings.editor": "json",
@@ -40,5 +40,8 @@
 
     // EXPLORER
     "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

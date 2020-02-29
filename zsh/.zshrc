@@ -72,3 +72,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export BROWSER=/usr/bin/firefox
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+
+export ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{#%G%}"
+export ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{x%G%}"
+export ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[blue]%}%{+%G%}"

@@ -37,9 +37,6 @@
 
 ; LINUX-XPS BAR PROPERTIES
 [bar/xps]
-    monitor 						= eDP1
-    monitor-fallback                = eDP1
-
     width               			= 100%
     height              			= 29
     padding-right       			= 2
